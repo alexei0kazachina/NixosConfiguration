@@ -55,6 +55,7 @@
   programs.partition-manager.enable = true;
   sound.mediaKeys.enable = true;
   services.xserver.displayManager.sddm.enable = true;
+  # https://nixos.wiki/wiki/AMD_GPU
   services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Enable the GNOME Desktop Environment.
