@@ -1,0 +1,2 @@
+# NixosConfiguration
+Конфигурации Nixos.
