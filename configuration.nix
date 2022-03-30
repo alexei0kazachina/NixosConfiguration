@@ -231,7 +231,8 @@ tree
   # };
 
   # List services that you want to enable:
-  hardware.steam-hardware.enable = true; 
+  hardware.steam-hardware.enable = true;
+  hardware.opengl.driSupport = true; 
   hardware.opengl.enable = true;
   programs.steam.enable = true;
   # Enable the OpenSSH daemon.
