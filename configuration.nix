@@ -24,7 +24,7 @@
    nixpkgs.config.allowUnfree = true;
   # nixpkgs.config.allowBroken = true;
   # hardware.nvidia.package = [ "nvidiaLegacy304" ];
-    boot.initrd.kernelModules = [ "amdgpu" ];
+  #  boot.initrd.kernelModules = [ "amdgpu" ];
    networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -56,7 +56,7 @@
   sound.mediaKeys.enable = true;
   services.xserver.displayManager.sddm.enable = true;
   # https://nixos.wiki/wiki/AMD_GPU
-  services.xserver.videoDrivers = [ "amdgpu" ];
+ # services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Enable the GNOME Desktop Environment.
   # services.xserver.displayManager.gdm.enable = true;
@@ -233,7 +233,7 @@ tree
 
   # List services that you want to enable:
   hardware.steam-hardware.enable = true;
-  hardware.opengl.driSupport = true; 
+ # hardware.opengl.driSupport = true; 
   hardware.opengl.enable = true;
   programs.steam.enable = true;
   # Enable the OpenSSH daemon.
