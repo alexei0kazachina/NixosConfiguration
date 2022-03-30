@@ -24,7 +24,7 @@
    nixpkgs.config.allowUnfree = true;
   # nixpkgs.config.allowBroken = true;
   # hardware.nvidia.package = [ "nvidiaLegacy304" ];
-
+    boot.initrd.kernelModules = [ "amdgpu" ];
    networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -55,7 +55,7 @@
   programs.partition-manager.enable = true;
   sound.mediaKeys.enable = true;
   services.xserver.displayManager.sddm.enable = true;
-
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Enable the GNOME Desktop Environment.
   # services.xserver.displayManager.gdm.enable = true;
@@ -215,7 +215,6 @@ ruby
 wget
 nixops
 tree
-alienarena
    ];
  nix = {
     package = pkgs.nixUnstable; # or versioned attributes like nix_2_4
